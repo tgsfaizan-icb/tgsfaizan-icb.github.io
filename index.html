@@ -26,27 +26,29 @@ body{
 /* HEADER */
 header{
     background:#111;
-    color:#fff;
-    padding:18px 6%;
+    color:white;
+    padding:16px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
     position:sticky;
     top:0;
     z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,0.25);
 }
 
 .logo{
     font-size:21px;
     font-weight:bold;
+    letter-spacing:1px;
 }
 
 .logo span{
-    color:#f5d000;
+    color:#ffd000;
 }
 
 nav a{
-    color:#fff;
+    color:white;
     text-decoration:none;
     margin-left:18px;
     font-size:14px;
@@ -54,8 +56,575 @@ nav a{
 
 /* HERO */
 .hero{
-    min-height:75vh;
+    min-height:78vh;
+    background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+    linear-gradient(135deg,#222,#555);
+    color:white;
     display:flex;
     align-items:center;
+    justify-content:center;
+    text-align:center;
     padding:70px 6%;
-   
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#ffd000;
+}
+
+.hero p{
+    font-size:18px;
+    color:#ddd;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+}
+
+.btn-yellow{
+    background:#ffd000;
+    color:#111;
+}
+
+.btn-dark{
+    background:transparent;
+    border:1px solid white;
+    color:white;
+}
+
+/* STATS */
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    max-width:900px;
+    margin:-45px auto 0;
+    position:relative;
+    padding:0 20px;
+}
+
+.stat{
+    background:white;
+    padding:25px 15px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.stat h2{
+    font-size:30px;
+    margin-bottom:7px;
+}
+
+.stat p{
+    color:#666;
+}
+
+/* SECTION */
+section{
+    padding:70px 6%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:40px;
+}
+
+/* CARS */
+.cars{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.car{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+    transition:.3s;
+}
+
+.car:hover{
+    transform:translateY(-5px);
+}
+
+.car-image{
+    height:210px;
+    background:linear-gradient(135deg,#222,#777);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:55px;
+}
+
+.car-content{
+    padding:22px;
+}
+
+.car-content h3{
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.car-info{
+    color:#666;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.view-btn{
+    display:block;
+    text-align:center;
+    background:#111;
+    color:white;
+    padding:12px;
+    border-radius:7px;
+    text-decoration:none;
+}
+
+/* WHY ICB */
+.why{
+    background:#111;
+    color:white;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.feature{
+    text-align:center;
+    padding:30px 20px;
+    border:1px solid #333;
+    border-radius:12px;
+}
+
+.feature-icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.feature p{
+    color:#bbb;
+    margin-top:10px;
+    line-height:1.6;
+}
+
+/* SELL CAR */
+.sell{
+    background:#ffd000;
+    text-align:center;
+}
+
+.sell h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.sell p{
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+.sell-btn{
+    display:inline-block;
+    background:#111;
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* CONTACT */
+.contact-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.contact-box p{
+    margin:12px 0;
+    color:#555;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer strong{
+    color:#ffd000;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:70vh;
+        padding:55px 6%;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+        margin:20px auto 0;
+    }
+
+    section{
+        padding:55px 5%;
+    }
+
+    .cars{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="logo">
+INDIA <span>CAR</span> BAZAR
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#cars">Cars</a>
+<a href="#sell">Sell Car</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+आपकी पसंद की <span>Perfect Used Car</span>
+</h1>
+
+<p>
+India Car Bazar में पाएं भरोसेमंद और अच्छी condition वाली
+Pre-Owned Cars. अपनी जरूरत और बजट के हिसाब से अपनी अगली कार चुनें।
+</p>
+
+<a href="#cars" class="btn btn-yellow">
+View Cars
+</a>
+
+<a href="#contact" class="btn btn-dark">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+<div class="stats">
+
+<div class="stat">
+<h2>05+</h2>
+<p>Cars Available</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Customer Focus</p>
+</div>
+
+<div class="stat">
+<h2>ICB</h2>
+<p>India Car Bazar</p>
+</div>
+
+</div>
+
+
+<!-- CARS -->
+<section id="cars">
+
+<h2 class="section-title">
+Featured Cars
+</h2>
+
+<p class="section-subtitle">
+हमारी उपलब्ध Pre-Owned Cars देखें
+</p>
+
+<div class="cars">
+
+<div class="car">
+
+<div class="car-image">
+🚙
+</div>
+
+<div class="car-content">
+
+<h3>Toyota Urban Cruiser Hyryder</h3>
+
+<div class="car-info">
+2023 Model<br>
+Petrol • Manual<br>
+Well Maintained
+</div>
+
+<div class="price">
+₹ Ask for Price
+</div>
+
+<a href="#contact" class="view-btn">
+View Details
+</a>
+
+</div>
+</div>
+
+
+<div class="car">
+
+<div class="car-image">
+🚘
+</div>
+
+<div class="car-content">
+
+<h3>Maruti Suzuki Brezza</h3>
+
+<div class="car-info">
+2022 Model<br>
+Petrol • Manual<br>
+Excellent Condition
+</div>
+
+<div class="price">
+₹ Ask for Price
+</div>
+
+<a href="#contact" class="view-btn">
+View Details
+</a>
+
+</div>
+</div>
+
+
+<div class="car">
+
+<div class="car-image">
+🚗
+</div>
+
+<div class="car-content">
+
+<h3>Premium Used Car</h3>
+
+<div class="car-info">
+Model Year<br>
+Petrol / Diesel<br>
+Verified Vehicle
+</div>
+
+<div class="price">
+₹ Ask for Price
+</div>
+
+<a href="#contact" class="view-btn">
+View Details
+</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY ICB -->
+<section class="why">
+
+<h2 class="section-title">
+Why India Car Bazar?
+</h2>
+
+<p class="section-subtitle" style="color:#aaa;">
+Used Car खरीदने और बेचने का आसान तरीका
+</p>
+
+<div class="features">
+
+<div class="feature">
+<div class="feature-icon">🚘</div>
+<h3>Quality Cars</h3>
+<p>
+अच्छी condition वाली Pre-Owned Cars की जानकारी।
+</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">🤝</div>
+<h3>Customer Support</h3>
+<p>
+Car खरीदने और बेचने में पूरी जानकारी और सहायता।
+</p>
+</div>
+
+<div class="feature">
+<div class="feature-icon">💰</div>
+<h3>Right Value</h3>
+<p>
+आपकी car के लिए बेहतर market value खोजने में मदद।
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SELL CAR -->
+<section class="sell" id="sell">
+
+<h2>अपनी Car बेचनी है?</h2>
+
+<p>
+अपनी car की details हमें भेजें और India Car Bazar
+के माध्यम से अपनी car sell करने की शुरुआत करें।
+</p>
+
+<a href="#contact" class="sell-btn">
+Sell Your Car
+</a>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<h2 class="section-title">
+Contact India Car Bazar
+</h2>
+
+<p class="section-subtitle">
+हमसे संपर्क करें
+</p>
+
+<div class="contact-box">
+
+<h2>INDIA CAR BAZAR</h2>
+
+<p>
+📍 Gwalior, Madhya Pradesh
+</p>
+
+<p>
+🚗 Premium Pre-Owned Cars
+</p>
+
+<p>
+खरीदना हो या बेचना — India Car Bazar से जुड़ें।
+</p>
+
+<a href="#" class="btn btn-yellow">
+WhatsApp Us
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 <strong>India Car Bazar</strong>
+</p>
+
+<p>
+Premium Pre-Owned Cars
+</p>
+
+</footer>
+
+</body>
+</html>
